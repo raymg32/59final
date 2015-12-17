@@ -1,0 +1,25 @@
+class Boat{
+  float dx,dy,speed;
+  
+  Boat (float tempDX, float tempDY,float tempSpeed){
+    dx = tempDX;
+    dy = tempDY;
+    speed = tempSpeed;
+  }
+
+  void display(){
+    stroke(0);
+    fill( 95, 68, 12);
+    rect( dx,dy, 80, 50);
+  }
+
+  void move(){
+    dx -= speed; 
+    if(dx == 0){
+    speed = speed * -1;
+    }
+    else if( dx == width){
+     speed = speed * -1;
+    }
+  }
+}
